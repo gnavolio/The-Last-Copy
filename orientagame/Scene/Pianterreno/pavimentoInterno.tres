@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dvhmcjdkvey7r"]
+
+[ext_resource type="Texture2D" uid="uid://chopppp60rlab" path="res://Scene/Esterno/Terriccio.png" id="1_p5ywg"]
+
+[resource]
+albedo_color = Color(0.41652763, 0.41652766, 0.41652763, 1)
+metallic_specular = 0.1
+roughness = 0.89
+roughness_texture = ExtResource("1_p5ywg")

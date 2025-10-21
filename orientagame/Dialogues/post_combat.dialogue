@@ -1,0 +1,6 @@
+
+~ antonio_post_combat
+Antonio: Ce l'hai fatta? Complimenti! Hai avuto fortuna eh? [next=1]
+Antonio: Come dici? Si fa tutto online? Incredibile, sono davvero cambiati i tempi. [next=1]
+Antonio: In ogni caso, ti consiglio di esplorare un po’ il campus: ci sono molte cose che ti torneranno utili... [next=1]
+Antonio: Ah! Se ti servono indicazioni su dove si trovano aule e laboratori, guarda il cartello vicino agli ascensori. => END!

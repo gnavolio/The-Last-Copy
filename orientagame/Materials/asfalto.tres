@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://sn5mdbf8nhs3"]
+
+[ext_resource type="Texture2D" uid="uid://cv0m7f70o55gy" path="res://Scene/Esterno/Asfalto_Roughness.png" id="1_apwhr"]
+
+[resource]
+resource_name = "Asfalto"
+cull_mode = 2
+albedo_color = Color(0.372409, 0.372409, 0.372409, 1)
+roughness_texture = ExtResource("1_apwhr")

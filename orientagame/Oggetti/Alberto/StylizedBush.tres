@@ -1,0 +1,37 @@
+[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://c5p33xis1fkn1"]
+
+[ext_resource type="Shader" uid="uid://dnu78xyggy20c" path="res://Oggetti/Alberto/grass.gdshader" id="1_lbil7"]
+[ext_resource type="Texture2D" uid="uid://btx7uqq7rf2fu" path="res://Oggetti/Alberto/CowLeaf.png" id="2_hnroj"]
+
+[sub_resource type="Gradient" id="Gradient_pookg"]
+offsets = PackedFloat32Array(0, 0.984674)
+colors = PackedColorArray(0.193649, 0.957514, 1.15514e-06, 1, 0.655479, 0.995363, 7.70092e-07, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_iynsv"]
+gradient = SubResource("Gradient_pookg")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_t7o5y"]
+seed = 1
+frequency = 0.002
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_tmdki"]
+noise = SubResource("FastNoiseLite_t7o5y")
+seamless = true
+in_3d_space = true
+seamless_blend_skirt = 0.65
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_lbil7")
+shader_parameter/texture_albedo = ExtResource("2_hnroj")
+shader_parameter/texture_gradient = SubResource("GradientTexture1D_iynsv")
+shader_parameter/texture_noise = SubResource("NoiseTexture2D_tmdki")
+shader_parameter/alpha_scissor_threshold = 0.9
+shader_parameter/transmission = Color(1, 1, 1, 1)
+shader_parameter/secondary_color = Color(0, 0, 0, 1)
+shader_parameter/secondary_attenuation = 0.2
+shader_parameter/grass_height = 1.0
+shader_parameter/wind_direction = Vector2(1, -0.5)
+shader_parameter/wind_speed = 0.2
+shader_parameter/wind_strength = 0.2
+shader_parameter/noise_scale = 12.0

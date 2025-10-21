@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxodtxcj43uwe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wnn6d"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_7ys75"]
+Panel/styles/panel = SubResource("StyleBoxFlat_wnn6d")
+
+[sub_resource type="GDScript" id="GDScript_mkqeg"]
+script/source = "extends Panel
+class_name BlackScreen
+
+var ttl : float
+var black : StyleBoxFlat = preload(\"res://UI/BlackScreen.tres\")
+
+signal all_black
+
+
+func _ready() -> void:
+	black.bg_color.a = 0
+	var t = Timer.new()
+	t.timeout.connect(all_black.emit)
+	#t.timeout.connect(queue_free)
+	add_child(t)
+	t.start(ttl)
+	await _fade(true)
+	all_black.emit()
+	await _fade(false)
+
+
+static func create(time:float) -> BlackScreen :
+	var bs := BlackScreen.new()
+	bs.ttl = time
+	UI.add_child(bs)
+	return bs
+
+
+func _fade(fade_in:bool) -> void :
+	var t := create_tween()
+	t.tween_property(self, \"modulate\", Color(0,0,0,0) if fade_in else Color(0,0,0,1), ttl/2)
+	await  t.finished
+"
+
+[node name="BlackScreen" type="Panel"]
+z_index = 1
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_7ys75")
+script = SubResource("GDScript_mkqeg")

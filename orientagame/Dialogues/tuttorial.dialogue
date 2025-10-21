@@ -1,0 +1,10 @@
+~ start
+Antonio: Ehi tu! Sei nuovo, vero? Io qui conosco tutti, e non ti ho mai visto. [next=3]
+Antonio: Piacere, {{SceneLoader.player.alias}}. Io sono Antonio, diciamo che studio qui da parecchio tempo. Camminiamo! [next=5]
+Antonio: Quella faccia spaesata... mi ricorda troppo me vent’anni fa. Scommetto che non hai la minima idea di dove andare, eh? [next=5]
+
+~ parte2
+Antonio: Hai già preso tutti i libri che ti servono, o ti manca ancora qualcosa? [next=4]
+Antonio: Se ti serve aiuto per trovare quello che cerchi, c'è una signora in fondo al corridoio che fa la bibliotecaria. [next=5]
+Antonio: Il primo piano però non è accessibile, stanno facendo dei lavori. [next=3]
+Antonio: Vai a parlare con lei, ti saprà indicare tutto. [next=3] => END!

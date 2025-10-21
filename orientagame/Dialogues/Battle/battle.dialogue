@@ -1,0 +1,51 @@
+~ combat_start
+Segretaria: Oh no… proprio adesso che stavo chiudendo. [next=1]
+Segretaria: Ma che tempismo! Sei uno di quelli che arriva sempre all’ultimo minuto, vero? [next=1]
+Segretaria: Non lo sai che apriamo dal lunedì al venerdì dalle 10.00 alle 12.00? Il martedì e il giovedì anche dalle 14.30 alle 16.30! [next=1]
+Segretaria: Dovrei essere già a casa. NON FARMI PERDERE TEMPO! => END!
+
+~ combat_end
+Segretaria: Non potevi leggere il regolamento? Non serve più portare moduli cartacei, ti basta usare Esse3. [next=1]
+Segretaria: Prendi questo: è il timbro che usavamo ai miei tempi. Ti ricorderà di ciò che hai imparato oggi.
+Segretaria: Adesso vattene! Non dimenticare di leggere il manifesto! => END!
+
+~ already_defeated
+Segretaria: come ti ho spiegato, devi andare su esse3! Non venire più qui! => END!
+
+~ confused
+{{SaveFile.combat_current_agent}} è confuso![next=1] => END!
+
+~ confusion
+{{SaveFile.combat_current_agent}} è così confuso da colpirsi da solo![next=1] => END!
+
+~ victory
+DAJEEEEEEEEEEEEEEE! [next=1] => END!
+
+~ lost
+Che schifo hai perso! [next=1] => END!
+
+### Mosse player
+~ mail_confusa
+{{SceneLoader.player.alias}} manda una mail, ma è così mal formattata che Segretaria è confusa!![next=1] => END!
+
+~ bevi_caffe
+{{SceneLoader.player.alias}}: Adesso ci vedo! ADESSO POSSO COMBATTERE[next=1] => END!
+
+~ allega_jpeg
+{{SceneLoader.player.alias}} invia un file .jpeg anziché un pdf, Segretaria è risentita! [next=1] => END!
+
+~ compila_modulo
+{{SceneLoader.player.alias}} sembra sapere già tutto su come si compila correttamente un modulo![next=1] => END!
+
+### Mosse segretaria
+~ modulomancante
+Segretaria: Mi stai portando tutti questi fogli, non sono né spillati, né completi! Torna a casa e RIPORTAMI IL MODULO MANCANTE! [next=1] => END!
+
+~ filecorrotto
+Segretaria: Senti giovanotto, vorrei anche poterti aiutare, ma il file che mi hai passato non si apre... [next=1] => END!
+
+~ indovinello
+Siamo in ferie. Risponderemo appena possibile [next=1] => END!
+
+~ monologo
+La Segretaria parte con un monologo su quanto male funzioni il sistema che ti lascia confuso, allibito e con un forte mal di testa... [next=1] => END!

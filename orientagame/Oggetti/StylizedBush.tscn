@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvwkud8fl6lrt"]
+
+[ext_resource type="PackedScene" uid="uid://xjscs0gfkwm" path="res://Oggetti/Alberto/Bush.blend" id="1_yncsa"]
+[ext_resource type="Material" uid="uid://c5p33xis1fkn1" path="res://Oggetti/Alberto/StylizedBush.tres" id="2_ax38j"]
+
+[node name="Bush" instance=ExtResource("1_yncsa")]
+
+[node name="Bush" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_ax38j")

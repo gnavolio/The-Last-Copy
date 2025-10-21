@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://djjuqv0l7j0m7"]
+
+[resource]
+resource_name = "Parete_esterna"
+cull_mode = 2
+albedo_color = Color(0.7638089, 0.7176174, 0.6518955, 1)
+roughness = 0.5

@@ -1,0 +1,181 @@
+[gd_scene load_steps=19 format=3 uid="uid://bse528t5p5nns"]
+
+[ext_resource type="PackedScene" uid="uid://ch11nqpyfy4ix" path="res://Scene/Retro/struttura_retro.tscn" id="2_cefek"]
+[ext_resource type="PackedScene" uid="uid://dpgxir70w4mvm" path="res://Nodi/Scene Swapper/scene_swapper.tscn" id="21_vxvoo"]
+[ext_resource type="PackedScene" uid="uid://c6vo4ccqrd5bq" path="res://Nodi/Confini/ConfineReale.tscn" id="22_qkrhp"]
+[ext_resource type="Script" uid="uid://xx8dv0jl6vvc" path="res://Scene/Retro/questionario_avviso.gd" id="30_nktf1"]
+[ext_resource type="Texture2D" uid="uid://dpy5h8gnlmwhj" path="res://UI/Elements/SfondobaseProporzionato.PNG" id="31_ine7u"]
+[ext_resource type="Texture2D" uid="uid://cv40jeq4ljxep" path="res://UI/Elements/Button.PNG" id="32_2ikkh"]
+[ext_resource type="Texture2D" uid="uid://bc3kkydy8u7vp" path="res://UI/Elements/ButtonSelected.PNG" id="33_wnxv4"]
+[ext_resource type="LabelSettings" uid="uid://u1t7bqg5rvys" path="res://UI/label_settings_NOTPressed.tres" id="34_ihlm5"]
+[ext_resource type="LabelSettings" uid="uid://chn3wv4fpjoxo" path="res://UI/label_settings_Pressed.tres" id="35_5eey2"]
+
+[sub_resource type="Gradient" id="Gradient_vxvoo"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.48699763)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_qkrhp"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lj750"]
+noise = SubResource("FastNoiseLite_qkrhp")
+color_ramp = SubResource("Gradient_vxvoo")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0isvt"]
+sky_top_color = Color(0.83172154, 0.76992494, 0.721065, 1)
+sky_horizon_color = Color(0.480912, 0.687797, 0.795837, 1)
+sky_curve = 0.3328714
+sky_energy_multiplier = 1.1
+sky_cover = SubResource("NoiseTexture2D_lj750")
+ground_bottom_color = Color(0.313523, 0.55411, 0.41642, 1)
+ground_horizon_color = Color(0.307512, 0.426979, 0.34402, 1)
+ground_curve = 0.121258
+
+[sub_resource type="Sky" id="Sky_wssxf"]
+sky_material = SubResource("ProceduralSkyMaterial_0isvt")
+
+[sub_resource type="Environment" id="Environment_cefek"]
+background_mode = 2
+sky = SubResource("Sky_wssxf")
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_vxvoo"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 2.63
+dof_blur_far_transition = 38.7
+auto_exposure_min_sensitivity = 128.85
+
+[sub_resource type="Compositor" id="Compositor_kmm41"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mrw6f"]
+bg_color = Color(0.011764706, 0.53333336, 0.79607844, 1)
+skew = Vector2(0.13, -0.02)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.007843138, 0.42745098, 0.6745098, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[node name="RetroDib" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.50000304, 0.7499994, -0.43301025, 1.4756229e-08, 0.4999982, 0.86602646, 0.86602366, 0.43301585, -0.25000066, 0, 0, 0)
+light_color = Color(1, 1, 0.901961, 1)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cefek")
+camera_attributes = SubResource("CameraAttributesPractical_vxvoo")
+compositor = SubResource("Compositor_kmm41")
+
+[node name="Spawners" type="Node" parent="."]
+
+[node name="SpawnerDX" type="Marker3D" parent="Spawners" groups=["spawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9994128, 0.40152225, -0.035771847)
+
+[node name="SpawnerSX" type="Marker3D" parent="Spawners" groups=["spawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.692614, 0.283354, 0.34337664)
+
+[node name="StrutturaRetro" parent="." instance=ExtResource("2_cefek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2389698, 1.0739226)
+
+[node name="Swappers" type="Node" parent="."]
+
+[node name="SceneSwapper" parent="Swappers" instance=ExtResource("21_vxvoo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3533473, 1.5967591, -1.3545828)
+target_scene_name = "giardini"
+target_spawner = &"SpawnRetroSX"
+direzione = 110
+
+[node name="SceneSwapper3" parent="Swappers" instance=ExtResource("21_vxvoo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8863416, 0.07343465, 0.022206426)
+target_scene_name = "giardini"
+target_spawner = &"SpawnRetroSX"
+direzione = 110
+
+[node name="SceneSwapper2" parent="Swappers" instance=ExtResource("21_vxvoo")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 1.3908286, 1.5967591, -1.3545828)
+target_scene_name = "giardini"
+target_spawner = &"SpawnRetroDX"
+direzione = 110
+
+[node name="Confini" type="Node" parent="."]
+
+[node name="MeshInstance3D3" parent="Confini" instance=ExtResource("22_qkrhp")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.442076, 0.5081954, 0.34295845)
+
+[node name="MeshInstance3D5" parent="Confini" instance=ExtResource("22_qkrhp")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.3380527, 0.5081954, 0.44571877)
+
+[node name="MeshInstance3D4" parent="Confini" instance=ExtResource("22_qkrhp")]
+transform = Transform3D(-1.6316084, 0, -8.742278e-08, 0, 1, 0, 1.4263973e-07, 0, -1, -2.45014, 0.5081954, 4.955596)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("30_nktf1")
+
+[node name="BaseGround" type="TextureRect" parent="CanvasLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("31_ine7u")
+
+[node name="Resume" type="TextureButton" parent="CanvasLayer/BaseGround"]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 428.00003
+offset_right = 1590.0
+offset_bottom = 1076.0
+scale = Vector2(0.226043, 0.226043)
+texture_normal = ExtResource("32_2ikkh")
+texture_hover = ExtResource("33_wnxv4")
+
+[node name="ResumeLabel" type="Label" parent="CanvasLayer/BaseGround/Resume"]
+layout_mode = 0
+offset_left = 145.99
+offset_top = 168.11
+offset_right = 1166.99
+offset_bottom = 510.11
+scale = Vector2(0.807853, 0.807853)
+text = "Riprendi"
+label_settings = ExtResource("34_ihlm5")
+
+[node name="ResumeLabelPressed" type="Label" parent="CanvasLayer/BaseGround/Resume"]
+visible = false
+layout_mode = 0
+offset_left = 145.99
+offset_top = 168.11
+offset_right = 1248.99
+offset_bottom = 537.11
+scale = Vector2(0.807853, 0.807853)
+text = "Riprendi"
+label_settings = ExtResource("35_5eey2")
+
+[node name="Label" type="Label" parent="CanvasLayer/BaseGround"]
+layout_mode = 0
+offset_left = -246.00002
+offset_top = 141.0
+offset_right = 1186.7601
+offset_bottom = 316.0
+scale = Vector2(1.1599988, 1)
+theme_override_colors/font_outline_color = Color(0.011764706, 0.42745098, 0.6745098, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 46
+text = "Grazie per aver giocato a 
+Tears of the Campus !"
+horizontal_alignment = 1
+autowrap_mode = 1
+clip_text = true
+
+[node name="Button" type="Button" parent="CanvasLayer/BaseGround"]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 306.0
+offset_right = 543.0
+offset_bottom = 337.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/align_to_largest_stylebox = 120
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_mrw6f")
+text = "Rispondi al questionario"

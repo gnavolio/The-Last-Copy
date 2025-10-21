@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Mossa" load_steps=2 format=3 uid="uid://baao6ssorgk"]
+
+[ext_resource type="Script" uid="uid://dcenu8ivg7kol" path="res://Mosse/mossa.gd" id="1_cx6fs"]
+
+[resource]
+script = ExtResource("1_cx6fs")
+name = "modulomancante"
+expression = "target.take_damage(15)
+target.set_remaining_damage(5)"
+metadata/_custom_type_script = "uid://dcenu8ivg7kol"

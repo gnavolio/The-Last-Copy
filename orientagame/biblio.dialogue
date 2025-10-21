@@ -1,0 +1,21 @@
+~ incontro_bibliotecaria
+Bibliotecaria: Ehm-ehm! Giovane studente, non scappare così in fretta! Stai cercando la biblioteca vero? [next=2]
+Bibliotecaria: Mi presento: sono la bibliotecaria del Dipartimento. E visto che ti ho beccato qui davanti al tabellone... risparmierai un viaggio fino alla biblioteca. [next=3]
+Bibliotecaria: Dimmi pure: che libro stai cercando? [next=1]
+{{SceneLoader.player.alias}}: Facilixx da usare. [next=1]
+Bibliotecaria: Perfetto! Ora ascolta bene, perché queste informazioni ti serviranno per sopravvivere all’universo accademico. [next=2]
+
+Bibliotecaria: Dove siamo: Dipartimento di Informatica, 1° piano – Ala B, Campus Universitario “E. Quagliariello”, Via E. Orabona, 4 – 70125 Bari. [next=3]
+Bibliotecaria: Sale di Lettura: Lunedì–Giovedì 8:00–19:30, Venerdì 8:00–18:30. [next=1]
+Bibliotecaria: Biblioteca: Lunedì–Venerdì 9:00–13:00, e nei pomeriggi di Lunedì e Giovedì 14:30–16:30. [next=2]
+Bibliotecaria: Se hai dubbi, puoi scrivere alla nostra referente: Anna Ungari – 📧 biblioteca.dib@uniba.it Oppure rivolgerti al coordinatore scientifico: Prof. Corrado Mencar. [next=3]
+
+Bibliotecaria: E ora… piccola sorpresa! Porto sempre con me una copia dei libri più richiesti. [next=2]
+Bibliotecaria: Ed ecco… tadaa! Ho proprio l’ultima copia di Facilixx da usare. [next=1]
+Bibliotecaria: Ma fai attenzione: è un libro molto desiderato dagli studenti. Se ti distrai, potresti non vederlo mai più! [next=2]
+
+[suono di voci in lontananza] [next=1]
+
+Studenti (in coro): “Andiamo subito in biblioteca a prendere Facilixx da usare!” [next=2]
+Bibliotecaria: Oh-oh… mi sa che vogliono lo stesso libro che hai chiesto tu. [next=1]
+Bibliotecaria: Tienilo stretto, ragazzo. Da questo momento… inizia la sfida! [next=2]

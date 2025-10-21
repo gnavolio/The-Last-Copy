@@ -1,0 +1,85 @@
+[gd_scene load_steps=40 format=3 uid="uid://bl03uhn0ryup"]
+
+[ext_resource type="Script" uid="uid://di2d124x5vdsf" path="res://Scene/BookMiniGame/enemy.gd" id="1_okyk4"]
+[ext_resource type="SpriteFrames" uid="uid://dcfydjt2hwgg3" path="res://Sprite/AnimatedSprites/Characters/Character_4.tres" id="5_4ieqi"]
+[ext_resource type="SpriteFrames" uid="uid://5hvga24wtslx" path="res://Sprite/AnimatedSprites/Characters/Character_5.tres" id="6_1d8js"]
+[ext_resource type="SpriteFrames" uid="uid://bcs4vp45ik85r" path="res://Sprite/AnimatedSprites/Characters/Character_6.tres" id="7_a0ig2"]
+[ext_resource type="SpriteFrames" uid="uid://cpmurkvirt1tn" path="res://Sprite/AnimatedSprites/Characters/Character_9.tres" id="10_s8iwt"]
+[ext_resource type="SpriteFrames" uid="uid://c2av4oc68hn8a" path="res://Sprite/AnimatedSprites/Characters/Character_10.tres" id="11_ld81v"]
+[ext_resource type="SpriteFrames" uid="uid://bj4vjabkcdnby" path="res://Sprite/AnimatedSprites/Characters/Character_11.tres" id="12_gnii3"]
+[ext_resource type="SpriteFrames" uid="uid://cpu7cje5d3h3j" path="res://Sprite/AnimatedSprites/Characters/Character_12.tres" id="13_q5lwa"]
+[ext_resource type="SpriteFrames" uid="uid://byv2tyn50agp2" path="res://Sprite/AnimatedSprites/Characters/Character_13.tres" id="14_28tub"]
+[ext_resource type="SpriteFrames" uid="uid://dilmcxgjocs8w" path="res://Sprite/AnimatedSprites/Characters/Character_14.tres" id="15_00ft4"]
+[ext_resource type="SpriteFrames" uid="uid://bofeonw71ui8u" path="res://Sprite/AnimatedSprites/Characters/Character_15.tres" id="16_xgm6f"]
+[ext_resource type="SpriteFrames" uid="uid://byk1132bj1mkw" path="res://Sprite/AnimatedSprites/Characters/Character_17.tres" id="18_7r71h"]
+[ext_resource type="SpriteFrames" uid="uid://ctpalsinoljlt" path="res://Sprite/AnimatedSprites/Characters/Character_18.tres" id="19_i6web"]
+[ext_resource type="SpriteFrames" uid="uid://cw3sku4ag333b" path="res://Sprite/AnimatedSprites/Characters/Character_19.tres" id="20_gux40"]
+[ext_resource type="SpriteFrames" uid="uid://bmfwyxlrl5uwd" path="res://Sprite/AnimatedSprites/Characters/Character_20.tres" id="21_1237k"]
+[ext_resource type="SpriteFrames" uid="uid://1axijma33a87" path="res://Sprite/AnimatedSprites/Characters/Character_21.tres" id="22_avxf0"]
+[ext_resource type="SpriteFrames" uid="uid://caoysk7msxdg5" path="res://Sprite/AnimatedSprites/Characters/Character_22.tres" id="23_yrfui"]
+[ext_resource type="SpriteFrames" uid="uid://b0psy63e2e2x0" path="res://Sprite/AnimatedSprites/Characters/Character_24.tres" id="25_n4rc0"]
+[ext_resource type="SpriteFrames" uid="uid://dqg0v4t6aqres" path="res://Sprite/AnimatedSprites/Characters/Character_25.tres" id="26_2fpoi"]
+[ext_resource type="SpriteFrames" uid="uid://iyhosps2k3f" path="res://Sprite/AnimatedSprites/Characters/Character_26.tres" id="27_ld33i"]
+[ext_resource type="SpriteFrames" uid="uid://dfq1dqml215gd" path="res://Sprite/AnimatedSprites/Characters/Character_27.tres" id="28_fkcfk"]
+[ext_resource type="SpriteFrames" uid="uid://cqujqvas4c7mt" path="res://Sprite/AnimatedSprites/Characters/Character_28.tres" id="29_uclqo"]
+[ext_resource type="SpriteFrames" uid="uid://ddgyso1v41wi4" path="res://Sprite/AnimatedSprites/Characters/Character_30.tres" id="31_ktpds"]
+[ext_resource type="SpriteFrames" uid="uid://0kjlrrlkjn8b" path="res://Sprite/AnimatedSprites/Characters/Character_31.tres" id="32_h0grb"]
+[ext_resource type="SpriteFrames" uid="uid://d1jbowqfc48pa" path="res://Sprite/AnimatedSprites/Characters/Character_32.tres" id="33_17tbc"]
+[ext_resource type="SpriteFrames" uid="uid://broqim45et18u" path="res://Sprite/AnimatedSprites/Characters/Character_33.tres" id="34_or1ms"]
+[ext_resource type="SpriteFrames" uid="uid://chhkypph14m1f" path="res://Sprite/AnimatedSprites/Characters/Character_34.tres" id="35_5slo8"]
+[ext_resource type="SpriteFrames" uid="uid://coge1qx6ctxqj" path="res://Sprite/AnimatedSprites/Characters/Character_35.tres" id="36_q0xte"]
+[ext_resource type="SpriteFrames" uid="uid://bdknd383qq5g7" path="res://Sprite/AnimatedSprites/Characters/Character_36.tres" id="37_a2tk2"]
+[ext_resource type="SpriteFrames" uid="uid://p84xpyvmbqmb" path="res://Sprite/AnimatedSprites/Characters/Character_37.tres" id="38_hbum4"]
+[ext_resource type="SpriteFrames" uid="uid://dn3uvymnyr7dg" path="res://Sprite/AnimatedSprites/Characters/Character_38.tres" id="39_oi4md"]
+[ext_resource type="SpriteFrames" uid="uid://daclythhlgcp2" path="res://Sprite/AnimatedSprites/Characters/Character_39.tres" id="40_upulv"]
+[ext_resource type="SpriteFrames" uid="uid://bsqlao8oi4erv" path="res://Sprite/AnimatedSprites/Characters/Character_40.tres" id="41_eer4x"]
+[ext_resource type="SpriteFrames" uid="uid://b5yviquh3kxcw" path="res://Sprite/AnimatedSprites/Characters/Character_41.tres" id="42_nanyw"]
+[ext_resource type="SpriteFrames" uid="uid://c0brg1ciefog2" path="res://Sprite/AnimatedSprites/Characters/Character_42.tres" id="43_ujkwj"]
+[ext_resource type="SpriteFrames" uid="uid://clhqufsh8fwcp" path="res://Sprite/AnimatedSprites/Characters/Character_43.tres" id="44_uoi5v"]
+[ext_resource type="SpriteFrames" uid="uid://cov7hpilkha8s" path="res://Sprite/AnimatedSprites/Characters/Character_29.tres" id="124_mjn3t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_okyk4"]
+radius = 4.0
+height = 14.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hmhn5"]
+particle_flag_disable_z = true
+angle_min = -720.0
+angle_max = 720.0
+initial_velocity_min = -50.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 0, 0)
+scale_min = 5.0
+scale_max = 5.0
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_okyk4")
+sprites = Array[SpriteFrames]([ExtResource("124_mjn3t"), ExtResource("124_mjn3t"), ExtResource("124_mjn3t"), ExtResource("5_4ieqi"), ExtResource("6_1d8js"), ExtResource("7_a0ig2"), ExtResource("124_mjn3t"), ExtResource("124_mjn3t"), ExtResource("10_s8iwt"), ExtResource("11_ld81v"), ExtResource("12_gnii3"), ExtResource("13_q5lwa"), ExtResource("14_28tub"), ExtResource("15_00ft4"), ExtResource("16_xgm6f"), ExtResource("124_mjn3t"), ExtResource("18_7r71h"), ExtResource("19_i6web"), ExtResource("20_gux40"), ExtResource("21_1237k"), ExtResource("22_avxf0"), ExtResource("23_yrfui"), ExtResource("124_mjn3t"), ExtResource("25_n4rc0"), ExtResource("26_2fpoi"), ExtResource("27_ld33i"), ExtResource("28_fkcfk"), ExtResource("29_uclqo"), ExtResource("124_mjn3t"), ExtResource("31_ktpds"), ExtResource("32_h0grb"), ExtResource("33_17tbc"), ExtResource("34_or1ms"), ExtResource("35_5slo8"), ExtResource("36_q0xte"), ExtResource("37_a2tk2"), ExtResource("38_hbum4"), ExtResource("39_oi4md"), ExtResource("40_upulv"), ExtResource("41_eer4x"), ExtResource("42_nanyw"), ExtResource("43_ujkwj"), ExtResource("44_uoi5v")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_okyk4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -10)
+scale = Vector2(2, 2)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_okyk4")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+scale = Vector2(10, 10)
+emitting = false
+amount = 100
+amount_ratio = 0.1
+lifetime = 0.2
+one_shot = true
+trail_lifetime = 0.01
+process_material = SubResource("ParticleProcessMaterial_hmhn5")

@@ -1,0 +1,8 @@
+[gd_resource type="PlaneMesh" load_steps=2 format=3 uid="uid://ditqkyg1c21hr"]
+
+[ext_resource type="Material" uid="uid://c5p33xis1fkn1" path="res://Oggetti/Alberto/StylizedBush.tres" id="1_vvyqi"]
+
+[resource]
+material = ExtResource("1_vvyqi")
+size = Vector2(1.175, 0.985)
+orientation = 0

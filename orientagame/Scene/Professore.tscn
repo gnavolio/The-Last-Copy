@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://btma1jjodau3c"]
+
+[ext_resource type="Script" uid="uid://c6nyw6f027fvs" path="res://Scene/professore.gd" id="1_mft7a"]
+[ext_resource type="Texture2D" uid="uid://ddbbb23ueajiq" path="res://Sprite/Professore.png" id="1_u2jsu"]
+[ext_resource type="Texture2D" uid="uid://csbahqdbcrb1a" path="res://Sprite/ProfessoreAllungato.png" id="2_mft7a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttmp4"]
+atlas = ExtResource("1_u2jsu")
+region = Rect2(0, 0, 1024, 1536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50qqc"]
+atlas = ExtResource("2_mft7a")
+region = Rect2(0, 0, 1024, 1471)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m3ib1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttmp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50qqc")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ymni3"]
+radius = 0.057617188
+height = 0.17861176
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_mft7a")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.26, 0, 0, 0, 0.26, 0, 0, 0, 0.26, 0, 0, 0)
+sprite_frames = SubResource("SpriteFrames_m3ib1")
+animation = &"Idle"
+frame = 1
+frame_progress = 0.880644
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16577148, 0)
+shape = SubResource("CapsuleShape3D_ymni3")

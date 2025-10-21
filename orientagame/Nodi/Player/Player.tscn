@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbrrkiulk8gem"]
+
+[ext_resource type="Script" uid="uid://bo552yay54hcq" path="res://Nodi/Player/player.gd" id="1_6kcg6"]
+[ext_resource type="SpriteFrames" uid="uid://dunaobhn4vj1v" path="res://Sprite/Player animation/Player.tres" id="2_5n1vw"]
+[ext_resource type="Script" uid="uid://rsofecfrndpm" path="res://Nodi/Player/camera.gd" id="49_ewljp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6nnpr"]
+margin = 0.1
+radius = 0.183865
+height = 0.497427
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("sprite") groups=["player"]]
+collision_layer = 2
+script = ExtResource("1_6kcg6")
+speed = 10.0
+sprite = NodePath("Sprite")
+
+[node name="Sprite" type="AnimatedSprite3D" parent="."]
+offset = Vector2(0, 16.96)
+pixel_size = 0.03
+billboard = 1
+texture_filter = 0
+sprite_frames = ExtResource("2_5n1vw")
+animation = &"idle_down"
+
+[node name="CollisionShape2D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24547, -0.346123)
+shape = SubResource("CapsuleShape3D_6nnpr")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.554845, 0.831954, 0, -0.831954, 0.554845, 0, 2.9, 2)
+cull_mask = 1048543
+current = true
+fov = 90.0
+script = ExtResource("49_ewljp")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://bh1e1on03v7lb"]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_4skoi"]
+[ext_resource type="Script" uid="uid://bxc0shvhr4wpt" path="res://Nodi/NPC/character.gd" id="2_qy67j"]
+[ext_resource type="SpriteFrames" uid="uid://cov7hpilkha8s" path="res://Sprite/AnimatedSprites/Characters/Character_29.tres" id="3_4skoi"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("2_qy67j")
+sprite = ExtResource("3_4skoi")
+metadata/_custom_type_script = "uid://bxc0shvhr4wpt"

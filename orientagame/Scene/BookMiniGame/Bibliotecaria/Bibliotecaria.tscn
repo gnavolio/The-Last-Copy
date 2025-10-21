@@ -1,0 +1,61 @@
+[gd_scene load_steps=11 format=3 uid="uid://bdnimyecp31wv"]
+
+[ext_resource type="Texture2D" uid="uid://stf6tknc88hk" path="res://Scene/BookMiniGame/Bibliotecaria/Bibliotecaria piccola.png" id="1_7t2pw"]
+[ext_resource type="Script" uid="uid://b3q3b0ptaminq" path="res://Scene/BookMiniGame/Bibliotecaria/bibliotecaria.gd" id="1_kpjue"]
+[ext_resource type="Texture2D" uid="uid://b4wn27a2x6fk2" path="res://Scene/BookMiniGame/Bibliotecaria/Bibliotecaria compressa.png" id="2_kpjue"]
+[ext_resource type="Texture2D" uid="uid://3gdujqkad13h" path="res://Scene/BookMiniGame/Bibliotecaria/Bibliotecaria piccola 2.PNG" id="3_dp5a7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wsi0b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwlxc"]
+atlas = ExtResource("1_7t2pw")
+region = Rect2(0, 0, 1024, 1536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vofvy"]
+atlas = ExtResource("2_kpjue")
+region = Rect2(0, 0, 2048, 1536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2is3d"]
+atlas = ExtResource("1_7t2pw")
+region = Rect2(0, 0, 1024, 1536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hfp5"]
+atlas = ExtResource("3_dp5a7")
+region = Rect2(0, 0, 2048, 1536)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cxwwn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwlxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vofvy")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2is3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hfp5")
+}],
+"loop": true,
+"name": &"Talk",
+"speed": 5.0
+}]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_kpjue")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_wsi0b")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cxwwn")
+animation = &"Talk"
+frame = 1
+frame_progress = 0.99304944

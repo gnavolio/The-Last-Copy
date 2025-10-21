@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=3 uid="uid://diog7mco415dw"]
+
+[ext_resource type="Script" uid="uid://6ueenayoxh8s" path="res://UI/ui.gd" id="1_beu5d"]
+[ext_resource type="PackedScene" uid="uid://be37vyuvt12r8" path="res://UI/ItemPreview.tscn" id="2_dajm1"]
+[ext_resource type="Script" uid="uid://cwsp2s5bgejb4" path="res://UI/scalerGameplay.gd" id="2_h81ot"]
+[ext_resource type="Texture2D" uid="uid://be4ot8awe6pda" path="res://UI/Elements/E.PNG" id="3_6rr40"]
+[ext_resource type="Texture2D" uid="uid://c8s240ycdvf1l" path="res://UI/Elements/ESelected.PNG" id="4_0w6e5"]
+[ext_resource type="Texture2D" uid="uid://p8hbs2lss34l" path="res://UI/Elements/Burger.png" id="5_o2jkc"]
+[ext_resource type="Texture2D" uid="uid://c2r5vceg32arv" path="res://UI/Elements/BurgerSelected.png" id="6_2qbci"]
+[ext_resource type="Script" uid="uid://gjcbt5kmqjdd" path="res://addons/touch_screen_joystick/touch_screen_joystick.gd" id="8_ow1yt"]
+[ext_resource type="Texture2D" uid="uid://bndtwwhsec260" path="res://UI/Elements/BackJoystick.PNG" id="9_o2t6a"]
+[ext_resource type="Texture2D" uid="uid://db1qwj7ik8kcc" path="res://UI/Elements/CursoreJoystick.PNG" id="10_8gukh"]
+[ext_resource type="AudioStream" uid="uid://cyl5f0dyy0kle" path="res://Sounds/Music/SongTearsOfTheCampus.mp3" id="11_6rr40"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6rr40"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="UI" type="Control" node_paths=PackedStringArray("black_screen")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_beu5d")
+black_screen = NodePath("BlackScreen")
+
+[node name="Scaler" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_h81ot")
+base_resolution = null
+
+[node name="Joystick" type="Control" parent="Scaler"]
+anchors_preset = 0
+offset_left = 153.0
+offset_top = 502.0
+offset_right = 153.0
+offset_bottom = 502.0
+script = ExtResource("8_ow1yt")
+antialiased = true
+use_textures = true
+base_texture = ExtResource("9_o2t6a")
+base_scale = Vector2(0.4, 0.4)
+knob_texture = ExtResource("10_8gukh")
+knob_scale = Vector2(0.5, 0.5)
+use_input_actions = true
+
+[node name="InteractionButton" type="TextureButton" parent="Scaler"]
+layout_mode = 0
+offset_left = 924.0
+offset_top = 515.0
+offset_right = 2076.0
+offset_bottom = 1163.0
+scale = Vector2(0.192993, 0.192993)
+size_flags_horizontal = 8
+size_flags_vertical = 10
+texture_normal = ExtResource("3_6rr40")
+texture_hover = ExtResource("4_0w6e5")
+
+[node name="PauseButton" type="TextureButton" parent="Scaler"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 890.0
+offset_right = 1914.0
+offset_bottom = 593.0
+grow_horizontal = 0
+scale = Vector2(0.207898, 0.207898)
+size_flags_horizontal = 8
+size_flags_vertical = 2
+texture_normal = ExtResource("5_o2jkc")
+texture_hover = ExtResource("6_2qbci")
+
+[node name="ItemPreview" parent="Scaler" instance=ExtResource("2_dajm1")]
+visible = false
+layout_mode = 1
+offset_left = 556.0
+offset_top = 304.0
+offset_right = 556.0
+offset_bottom = 304.0
+
+[node name="CurrentQuest" type="Label" parent="Scaler"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 8.09
+anchor_bottom = 1.725
+offset_left = 20.0
+offset_top = 19.0
+offset_right = 586.4
+theme_override_colors/font_outline_color = Color(0.007843138, 0.47058824, 0.7372549, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 26
+uppercase = true
+
+[node name="BlackScreen" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6rr40")
+
+[node name="Song" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_6rr40")
+bus = &"Music"
+parameters/looping = true
+
+[connection signal="button_up" from="Scaler/InteractionButton" to="." method="_on_interaction_button_pressed"]
+[connection signal="button_up" from="Scaler/PauseButton" to="." method="_on_pause_button_pressed"]
